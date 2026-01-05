@@ -1,0 +1,30 @@
+[project]
+name = "mlops2025-ElieHaouchan-GhadyNehme"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    "pandas>=2.3.3",
+    "scikit-learn>=1.8.0",
+    "joblib>=1.5.3",
+    "numpy>=2.4.0",
+]
+
+[project.optional-dependencies]
+sagemaker = [
+    "sagemaker>=3.3.0",
+    "boto3>=1.42.21",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.uv]
+package = true
+
+
+[project.scripts]
+train = "mlproject.pipelines.train_pipeline:main"
+inference = "mlproject.pipelines.inference_pipeline:main"

@@ -1,0 +1,36 @@
+# --- Data and Models ---
+data/
+models/
+outputs/
+*.joblib
+*.pkl
+*.csv
+
+# --- Python & Environment ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+.python-version
+
+# --- UV (Package Manager) ---
+# We keep uv.lock for reproducibility, but ignore the tool cache
+.uv/
+
+# --- Docker ---
+.dockerignore
+# (Note: Do NOT ignore Dockerfile or docker-compose.yml)
+
+# --- AWS & Secrets ---
+.aws/
+.env
+*.pem
+credentials.csv
+
+# --- IDEs & OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
