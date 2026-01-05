@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    volumes:
+      # Mount the source code and scripts so the container can see them
+      - ./src:/app/src
+      - ./scripts:/app/scripts
+      # Persist data and models
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./outputs:/app/outputs
+    environment:
+      - PYTHONPATH=/app/src  # This tells Python to look in /app/src for mlproject
